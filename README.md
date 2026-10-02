@@ -69,7 +69,9 @@ Ghost **16 Windows मजबूती फंक्शन** प्लस **Azure 
 ### सुरक्षा मूल्यांकन
 ```powershell
 # Ghost मॉड्यूल लोड करो
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # वर्तमान सुरक्षा स्थिति चेक करो
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### विकल्प 1: प्रत्यक्ष डाउनलोड (टेस्टिंग)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### विकल्प 2: मॉड्यूल इंस्टॉलेशन
